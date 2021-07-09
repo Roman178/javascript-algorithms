@@ -14,10 +14,7 @@
  */
 
 function palindrome(str) {
-  const onlyCharsAndDigs = str
-    .replace(/[^A-Za-z0-9а-яА-Я\s]/g, "")
-    .replace(/\s+/g, "")
-    .toLowerCase();
+  const onlyCharsAndDigs = str.replace(/[^A-Za-z0-9а-яА-Я]/g, "").toLowerCase();
   const reversedStr = onlyCharsAndDigs
     .split("")
     .reverse()
@@ -33,6 +30,7 @@ console.log(palindrome("топот")); // должно быть true
 console.log(palindrome("Saippuakivikauppias")); // true
 console.log(palindrome("привет")); // false
 console.log(palindrome("прDDSивет? sdАВАЫsda. cds!@., $$./. uyuj")); // false
+console.log(palindrome("О, лета тело!")); // true
 
 /*
  * Бонус. Задача для любознательных. Пусть функция принимает на вход любую строку,
